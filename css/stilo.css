@@ -1,0 +1,314 @@
+/* https://www.devmedia.com.br/como-utilizar-a-tecnica-css-reset/26797 */
+
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    list-style: none;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif
+}
+
+/* Os elementos mais externos que envolvem o header são o html e o body, dessa forma, podemos determinar que ambos devem conter em todo o espaço da tela: */
+html, body {
+    background-color: #eee !important
+}
+
+.row>* {
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .0); 
+    
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.topnav{
+    width: 100% !important;
+    min-height: 0vh;
+    padding-left: 10px;
+    overflow: hidden;
+    background-color: #9b34f0;
+}
+
+.cont-main{
+    margin-left: 2vh;
+    float: left;
+    /* overflow: hidden; A overflowpropriedade CSS controla o que acontece com o conteúdo que é muito grande para caber em uma área. */
+
+}
+
+.side-nav, .cont-main{
+    width: 100%;
+    height: 90vh;
+    float: left;
+    margin-top: 2vh ;     
+}
+
+.topnav, .side-nav, .cont-main{
+    position: relative;
+    border: 1px solid #9b34f0;
+}
+
+    /*********** Fim das configurações principais da pagina ***********/
+
+    /*********** configurações dos elementos do Header menu navbar  ***********/
+    
+    .topnav, ul, li, p{
+        font-size: 1.2rem;
+        font-family: Arial;
+        margin-bottom: 0rem;
+    }
+    
+    a, .logo{
+        text-decoration: none; /* tira o sublinhado dos links*/
+        color: #fff;
+    }
+    
+    a:visited { text-decoration: none; color:#fff; }
+    a:hover { text-decoration: none; color:#fff; }
+    a:focus { text-decoration: none; color:#fff; }
+    a:hover, a:active { text-decoration: none; color:#fff } 
+    
+    .elementos_topnav{
+        display: flex;
+        flex-wrap: wrap; /* Quando a tela for menor os itens se alinham abaixo */
+        justify-content: space-between; /* coloca um espço entre os itens */
+        align-items: center; /* Alinha os itens no centro */
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    
+    .menu {
+        display: flex;
+    }
+    
+    .menu li{
+        margin-left: 10px;
+    }
+    
+    .menu li a{
+        display: block;
+        padding: 15px;
+    }
+
+    /****************************FIM do HEADER vavbar ************************/
+
+.border_remove{
+    width: 100%;
+    box-shadow: 0 0 0 0 !important; 
+    border: 0 none !important;
+    outline: 0 !important;
+}
+
+.espace-div{
+    padding-bottom: 15px;
+}
+
+.box-style {
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 3px 3px 36px rgba(0, 0, 0, 0.2);
+    overflow: auto;
+}
+
+.box-style .title {
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+    background: #9b34f0;
+    font-size: 16px; /* Tamanho da fonte side-nav*/
+    font-weight: 500;
+    border-radius: 4px 4px 0 0
+}
+
+.box-style .box {
+    padding: 0px 20px 15px;
+    background: #fff;
+    border-radius: 10px
+}
+
+.box-style .box .label-style {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    border: 1px solid rgb(153, 151, 151);
+    border-radius: 5px;
+    margin: 15px 0;
+    padding-left: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.box-style .box .label-style .text {
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 10px;
+    transition: color 0.3s ease
+}
+
+.wrapgrade{
+    width: 300px !important;
+}
+
+.title-box{
+    margin: -2px 0px 0px;
+    font-size: 20px 
+}
+
+.label-valores{
+    height: 56px !important;  
+    font-size: 20px !important;
+    
+}
+
+.input-box{   
+    margin: 20px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.label-hours{
+    padding: 0 0 0 0 ;
+}
+
+.btn_grande {
+    width: 100%;
+    background-color: #9b34f0;
+    border: none;
+    color: white;
+    padding: 6px;
+    text-align: center;
+    font-size: 19px;
+    /* font-weight: 600; */
+    /* margin: 0px 0px; */
+    opacity: 0.9;
+    transition: 0.3s
+}
+
+.btn_grande:hover {
+    opacity: 1;
+}
+
+/****** Botão dias da semana ***********************/
+
+.box-days{
+    padding-left: 5px !important;
+}
+
+.dias-semanas{
+    width: 90px;
+    height: 64px;
+    float: left;
+    padding-right: 5px;   
+}
+
+.lbl-dias-semana{
+
+    width: 100%;
+    height: 28px;
+    border: 2px solid #9b34f0;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000;
+    font-size: 15px;
+    margin: 0px 0;
+    
+    
+}
+
+
+/****** FIm config Botão dias da semana ***********************/
+
+/* Estado do botão */
+
+#value-1:checked~.value-1,
+#value-2:checked~.value-2,
+#value-3:checked~.value-3,
+#value-4:checked~.value-4,
+#value-5:checked~.value-5,
+#value-6:checked~.value-6 {
+    background: #9b34f0;
+    border-color:#9b34f0
+}
+
+.box-style .box .label-style .select-dots {
+    width: 20px;
+    height: 20px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.3s ease
+}
+
+#value-1:checked~.value-1 .select-dots,
+#value-2:checked~.value-2 .select-dots,
+#value-3:checked~.value-3 .select-dots,
+#value-4:checked~.value-4 .select-dots,
+#value-5:checked~.value-5 .select-dots,
+#value-6:checked~.value-6 .select-dots {
+    background: #fff
+}
+
+.box .label-style .select-dots::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    transition: all 0.3s ease
+}
+
+#value-1:checked~.value-1 .select-dots::before,
+#value-2:checked~.value-2 .select-dots::before,
+#value-3:checked~.value-3 .select-dots::before,
+#value-4:checked~.value-4 .select-dots::before,
+#value-5:checked~.value-5 .select-dots::before,
+#value-6:checked~.value-6 .select-dots::before {
+    background: #9b34f0;
+    transform: translate(-50%, -50%) scale(1)
+}
+
+#value-1:checked~.value-1 .text,
+#value-2:checked~.value-2 .text,
+#value-3:checked~.value-3 .text,
+#value-4:checked~.value-4 .text,
+#value-5:checked~.value-5 .text,
+#value-6:checked~.value-6 .text {
+    color: #fff
+}
+
+.box-style .box input[type="checkbox"] {
+    display: none;
+}
+
+/* Daqui para baixo é para teste */
+
+
+.dia-semana {
+    background: #fff;
+    cursor: pointer; 
+    padding: 5px 5px;
+  }
+  
+  .dia-semana.down {
+    background: #9b34f0;
+   
+
+   
+  }
