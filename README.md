@@ -22,7 +22,7 @@ para excluir e editar nesta lista.<br/>
 
 # O sistema ainda está construção e passando por constantes melhorias.<br/>
 
-# O sistema é composto pelas seguintes linguagens de progrmação<br/>
+# O linguagens de programação usadas nesse sistema<br/>
 
 - HTML5<br/>
 - CSS<br/>
