@@ -22,7 +22,7 @@ para excluir e editar nesta lista.<br/>
 
 # O sistema ainda está construção e passando por constantes melhorias.<br/>
 
-# O linguagens de programação usadas<br/>
+# Linguagens de programação usadas<br/>
 
 - HTML5<br/>
 - CSS<br/>
