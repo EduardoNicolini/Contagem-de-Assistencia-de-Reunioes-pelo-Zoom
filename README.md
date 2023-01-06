@@ -24,7 +24,7 @@ para excluir e editar nesta lista.<br/>
 
 # Linguagens de programação usadas<br/>
 
-- HTML5<br/>
+- HTML 5<br/>
 - CSS<br/>
 - Bootstrap<br/>
 - JavaScript<br/>
