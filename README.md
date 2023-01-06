@@ -1,4 +1,4 @@
-# Contagem-de-Assistencia-para-Reuniões-pelo-Zoom
+# Contagem de Assistencia para Reuniões pelo Zoom
 
 - Este projeto tem como finalidade facilitar a contagem a identificação e o controle de convidados presentes em uma reunião via aplicativo Zoom.<br/>
 - Ao acessar o endereço WEB enviado ao convidado, na tela principal "index" o convidado tem a opção de escolher se está em uma reunião presencial ou não.<br/> 
