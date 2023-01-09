@@ -4,7 +4,7 @@
     require 'dados_bd.php';
 
     $link_zoom = trim(isset($_POST['link'])) ? $_POST['link'] : ''; // resgata variáveis do formulário
-	$cod_id = trim(isset($_POST['id'])) ? $_POST['id'] : ''; // resgata variáveis do formulário
+    $cod_id = trim(isset($_POST['id'])) ? $_POST['id'] : ''; // resgata variáveis do formulário
     $senha = trim(isset($_POST['senha'])) ? $_POST['senha'] : '';
 
     if (empty($link_zoom) || empty($cod_id) || empty($senha)){
