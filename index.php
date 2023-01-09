@@ -82,7 +82,6 @@
 
         <header class="d-flex position-relative">
             
-            <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> -->
             <nav class="bg-secondary navbar navbar-expand-md fixed-top">
 
                 <div class="container-fluid">
@@ -104,8 +103,7 @@
                 
                 <main role="main" class="col-sm-12 col-md-9 col-lg-7 col-xl-6">
                     
-                    <!-- Se o dia for igual ao programado compara a hora com a hora programada e exibe o formulario para ser preenxido  -->
-                        
+                    <!-- Se o dia for igual ao programado compara a hora com a hora programada e exibe o formulario para ser preenxido  -->      
                     <div class="d-none dia-reuniao">
                         
                         <div class="d-none hora-reuniao">
