@@ -1,9 +1,7 @@
 <?php
 
-    //Definindo o prazo para a cache expirar em 60 minutos.
+    //Definindo o prazo para a cache expirar.
     session_cache_expire(180);
-
-    //date_default_timezone_set('UTC');
     
     require 'dados_bd.php'; // Chama as configurações do BD
     
@@ -23,12 +21,9 @@
         $dados_user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         // Caso se o BD não retornar valor nenhum ou null o valor é comparado como false, caso retorne algum valor compara com o da sessão
-        if ($id_sessao == isset($dados_user['id']) ?? false ) {
-                
+        if ($id_sessao == isset($dados_user['id']) ?? false ) {  
             echo "<script>location.href='dados_reuniao.php'</script>";
-
         }
-            
     }
     else{
 
@@ -71,7 +66,6 @@
 
         <link type="text/css" rel="stylesheet" href="css/style.css?<?=time()?>"/>
 
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
         <title>Contagem de assistencia</title>
@@ -144,7 +138,6 @@
 
                                             </div>
                                                                 
-                                        
                                             <div class="input-group justify-content-center align-items-center px-4 my-4 ">
 
                                                 <button type="button" class="btn btn-secondary text-white text-center rounded assit_present" >Presencial Salão</button>
@@ -293,7 +286,6 @@
                     let horas = dateHours.toLocaleTimeString().substr(0, 5); // Exibe o horario 00:00:00, ".substr(0, 5) deixa as horas 00:00"
                     let date = dateHours.toLocaleDateString().split('/').reverse().join('-'); // Exibe a data: e inverte data dd/MM/AAAA para AAA/MM/dd e cnverte / para -
                     var semana = dia_semana[dateHours.getDay()]; // Exibe o nome do dia da semana
-                    //console.log(horas);
                     //======================================================================
                     
                     $.ajax({    
@@ -303,42 +295,33 @@
                         dataType: 'json',
                         async: true,
 
-                        success: function(result){
+                        success: function(event){
                         
-                            if (( semana == result.diaSemana) || (date == result.dataReuniao)){
+                            if (( semana == event.diaSemana) || (date == event.dataReuniao)){
                                 
                                 sem_reuniao.classList.add('d-none');
                                 dia_reuniao.classList.remove('d-none'); // Atima a DIV dia de reunião
                                 
-                                if (horas < result.horario_1.substr(0, 5)){
-                                    
-                                    $('#hora').text(result.horario_1.substr(0, 5));
+                                if (horas < event.horario_1.substr(0, 5)){
+                                    $('#hora').text(event.horario_1.substr(0, 5));
                                     aguarde_reuniao.classList.remove('d-none');
                                 }
 
-                                if ((horas >= result.horario_1.substr(0, 5)) && (horas <= result.horario_2.substr(0, 5))) {
-                                    
+                                if ((horas >= event.horario_1.substr(0, 5)) && (horas <= event.horario_2.substr(0, 5))) {
                                     aguarde_reuniao.classList.add('d-none');
                                     fim_reuniao.classList.add('d-none');
                                     hr_reuniao.classList.remove('d-none');
-
                                 }
 
-                                if (horas > result.horario_2.substr(0, 5)){
-                                    
+                                if (horas > event.horario_2.substr(0, 5)){ 
                                     hr_reuniao.classList.add('d-none');
                                     aguarde_reuniao.classList.add('d-none');
                                     fim_reuniao.classList.remove('d-none');
-
                                 } 
-                                
-                            }
-                            else {
-                                
+                            } else{
                                 fim_reuniao.classList.add('d-none');
                                 dia_reuniao.classList.add('d-none');
                                 sem_reuniao.classList.remove('d-none');
-
                             }
 
                         }                                                   
@@ -358,18 +341,13 @@
             function menu(){
 
                 if(cont.classList.contains('ocultar')) {
-
                     cont.classList.add('d-none');
-
                 }
                 if(container.classList.contains('d-none')) {
 
                     container.classList.remove('d-none');
-
-                } else {
-                    
+                } else {       
                     container.classList.add('d-none');
-                    //cont.classList.remove('d-none');
                 }
 
             }; 
@@ -379,7 +357,7 @@
             /*-------------------- Botão incremento Decremento -----------------------*/
             var contagem = document.querySelector('.contagem');
 
-            $('.btn-calc').on('click', function(e) {
+            $('.btn-calc').on('click', function(event) {
 
                 if (this.id == 'incrementar') {
 
@@ -407,11 +385,8 @@
 
             // ======================== Trata a function valida()  ===============================
             $(document).ready(function() {
-            
                 $('#nome, .contagem').on('input', valida);
-
                 $('.btn-calc').on('click', valida);
-
             });
             
             function valida() {
@@ -423,10 +398,7 @@
 
                 $('#sub').prop('disabled', !isEmpty1);
                 
-                isEmpty1 ? $('.btn_submit').addClass('btnsubmit') : $('.btn_submit').removeClass('btnsubmit');
-                
-                //console.log(cont);
-                
+                isEmpty1 ? $('.btn_submit').addClass('btnsubmit') : $('.btn_submit').removeClass('btnsubmit'); 
             }
             //====================================================================================
 
