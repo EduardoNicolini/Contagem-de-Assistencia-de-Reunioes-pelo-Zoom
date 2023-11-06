@@ -14,8 +14,6 @@
 	function pass_hash($pass, $user){
 		
 		return password_hash(hash_hmac('sha3-512', $pass, $user), PASSWORD_DEFAULT, ['cost' => 10]);
-
-	    //return $hash;
 		
 	}
 
